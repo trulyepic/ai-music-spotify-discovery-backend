@@ -51,7 +51,8 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:3001", "http://ai-music-spotify-discovery-backe-production.up.railway.app")); // Allow frontend domain
+        configuration.setAllowedOrigins(List.of("http://localhost:3001", "http://ai-music-spotify-discovery-backe-production.up.railway.app",
+                "http://ai-music-spotify-discovery-backe-production.up.railway.app/api/spotify/user")); // Allow frontend domain
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true);
